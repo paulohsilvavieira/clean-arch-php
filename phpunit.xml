@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.5/phpunit.xsd"
+         bootstrap="./vendor/autoload.php"
+         executionOrder="depends,defects"
+         failOnRisky="true"
+         failOnWarning="true"
+         colors="true">
+    <php>
+        <env name="XDEBUG_MODE" value="coverage" />
+    </php>
+    <testsuites>
+        <testsuite name="default">
+            <directory>./tests</directory>
+        </testsuite>
+    </testsuites>
+
+
+    <coverage>
+        <include>
+            <directory suffix=".php">./src</directory>
+        </include>
+        <report>
+            <html outputDirectory="coverage"/>
+        </report>
+        <exclude>
+            <directory suffix=".php">./src/**/protocols/</directory>
+            <directory suffix=".php">./src/main/</directory>
+        </exclude>
+    </coverage>
+
+    <logging>
+        <testdoxText outputFile="php://stdout"/>
+    </logging>
+
+
+</phpunit>

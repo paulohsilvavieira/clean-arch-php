@@ -1,0 +1,30 @@
+{
+    "name": "paulohsilvavieira/clean-arch-php",
+    "type": "project",
+    "require": {
+        "phpunit/phpunit": "^9.5",
+        "slim/slim": "4.*",
+        "slim/psr7": "^1.5",
+        "laminas/laminas-diactoros": "^2.17",
+        "vlucas/phpdotenv": "^5.4"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/",
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+         "test":"phpunit",
+         "test-coverage": ["@putenv XDEBUG_MODE=coverage", "phpunit --coverage-html coverage"],
+         "dev": ["@putenv PORT=6900", "php -S 0.0.0.0:${PORT} --docroot=public"]
+
+    },
+    "authors": [
+        {
+            "name": "Paulo Henrique",
+            "email": "paulo.hsilvavieira@gmail.com"
+        }
+    ]
+}
