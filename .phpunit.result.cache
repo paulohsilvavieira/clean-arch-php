@@ -1,1 +1,1 @@
-{"version":1,"defects":{"CreateUserUsecaseTest::testExecuteUsecase":6},"times":{"CreateUserUsecaseTest::testExecuteUsecase":0.021}}
+{"version":1,"defects":{"CreateUserUsecaseTest::testExecuteUsecase":4,"CreateUserUsecaseTest::testVerifyCorrectParams":5,"CreateUserUsecaseTest::testVerifyParamsOnCreateUserRepo":4},"times":{"CreateUserUsecaseTest::testExecuteUsecase":0.105,"CreateUserUsecaseTest::testVerifyCorrectParams":0.001,"CreateUserUsecaseTest::testVerifyParamsOnCreateUserRepo":0.006}}

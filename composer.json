@@ -16,8 +16,8 @@
         }
     },
     "scripts": {
-         "test":"phpunit",
-         "test-coverage": ["@putenv XDEBUG_MODE=coverage", "phpunit --coverage-html coverage"],
+         "test":["@putenv XDEBUG_MODE=coverage","phpunit --testdox --no-coverage"],
+         "test-coverage": ["@putenv XDEBUG_MODE=coverage", "@test --coverage-html coverage "],
          "dev": ["@putenv PORT=6900", "php -S 0.0.0.0:${PORT} --docroot=public"]
 
     },
