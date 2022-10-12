@@ -13,6 +13,6 @@ class Router
   public static function route(App $app)
   {
 
-    $app->get('/books/{id}/{book}', AdapterSlimRouter::routerAdapter(MakeHelloWordController::factory()));
+    $app->get('/', AdapterSlimRouter::routerAdapter(MakeHelloWordController::factory()));
   }
 }

@@ -8,7 +8,7 @@ use App\presenters\api\protocols\Controller;
 
 class MakeHelloWordController
 {
-  public static function factory(): Controller
+  public static function factory()
   {
     return new HelloWordController();
   }

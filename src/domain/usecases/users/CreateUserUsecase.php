@@ -20,7 +20,7 @@ class CreateUserUsecase implements ICreateUserUsecase
 
   public function execute(CreateUserParamsDTO $params): bool
   {
-    $result = $this->userRepository->create($params);
+    $result = $this->userRepository->create(params: $params);
 
     return $result;
   }

@@ -5,7 +5,7 @@ use Slim\Factory\AppFactory;
 
 
 $app = AppFactory::create();
-
-Router::route($app);
+$router = new Router();
+$router->route($app);
 
 $app->run();
