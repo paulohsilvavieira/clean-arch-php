@@ -5,4 +5,4 @@ services:
       ports:
         - "6900:80"
       volumes:
-        - ./:/usr/share/nginx
+        - ./:/app
