@@ -2,6 +2,7 @@
 
 namespace App\presenters\api\controllers;
 
+use App\domain\protocols\usecases\users\DTO\CreateUserParamsDTO;
 use App\domain\usecases\users\CreateUserUsecase;
 use App\presenters\api\protocols\Controller;
 use App\presenters\api\protocols\HttpRequest;
@@ -27,7 +28,12 @@ class HelloWordController extends Controller
   public function handler(HttpRequest $httpRequest): HttpResponse
   {
     try {
-      $result = $this->createUserUsecase->execute(params: $httpRequest->body);
+      $params = new CreateUserParamsDTO(
+        name: $httpRequest->body->name,
+        lastName: $httpRequest->body->lastName,
+        email: $httpRequest->body->email
+      );
+      $result = $this->createUserUsecase->execute(params: $params);
       if ($result) {
         return $this->httpResponse->httpOk([
           'msg' => 'Ok'

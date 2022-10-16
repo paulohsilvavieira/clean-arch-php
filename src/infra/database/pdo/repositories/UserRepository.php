@@ -1,6 +1,6 @@
 <?php
 
-namespace App\infra\database\repositories;
+namespace App\infra\database\pdo\repositories;
 
 use App\domain\protocols\repositories\users\ICreateUserRepo;
 use App\domain\protocols\usecases\users\DTO\CreateUserParamsDTO;

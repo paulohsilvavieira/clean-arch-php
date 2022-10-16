@@ -13,6 +13,6 @@ class Router
   public static function route(App $app)
   {
 
-    $app->get('/', AdapterSlimRouter::routerAdapter(MakeHelloWordController::factory()));
+    $app->post('/', AdapterSlimRouter::routerAdapter(MakeHelloWordController::factory()));
   }
 }
